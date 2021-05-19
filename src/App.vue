@@ -1,30 +1,25 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+    <div class="font-sans">
+        <nav class="h-16 w-full shadow-sm bg-gradient-to-l from-blue-400 via-blue-500 to-blue-600 flex items-center">
+            <h2 class="text-gray-300 ml-7 font-semibold">Em processo de desenvolvimento...</h2>
+        </nav>
+        <div class="h-screen w-full flex items-center justify-center">
+            <img class="h-80 w-80 block" 
+                 :src="background" alt="App development">
+        </div>
+    </div>
 </template>
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { background } from '@/assets/images';
 
+export default defineComponent({
+    name: 'App',
+
+    setup() {
+        return { background };
+    }
+});
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
